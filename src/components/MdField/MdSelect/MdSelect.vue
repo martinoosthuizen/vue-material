@@ -245,13 +245,15 @@
 
         let content = []
 
-        this.localValue.forEach(item => {
-          const textContent = this.MdSelect.items[item]
+        if (this.localValue) {
+          this.localValue.forEach(item => {
+            const textContent = this.MdSelect.items[item]
 
-          if (textContent) {
-            content.push(textContent)
-          }
-        })
+            if (textContent) {
+              content.push(textContent)
+            }
+          })
+        }
 
         this.setContent(content.join(', '))
       },

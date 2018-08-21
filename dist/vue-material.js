@@ -8787,13 +8787,15 @@ exports.default = {
 
       var content = [];
 
-      this.localValue.forEach(function (item) {
-        var textContent = _this.MdSelect.items[item];
+      if (this.localValue) {
+        this.localValue.forEach(function (item) {
+          var textContent = _this.MdSelect.items[item];
 
-        if (textContent) {
-          content.push(textContent);
-        }
-      });
+          if (textContent) {
+            content.push(textContent);
+          }
+        });
+      }
 
       this.setContent(content.join(', '));
     },
