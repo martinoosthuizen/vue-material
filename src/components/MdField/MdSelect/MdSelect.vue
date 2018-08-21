@@ -286,7 +286,7 @@
           this.localValue = this.setLocalValueIfMultiple()
         } else if (!this.multiple && isArray) {
           this.localValue = this.setLocalValueIfNotMultiple()
-        } else this.localValue = null;
+        } else this.localValue = [];
       },
       emitSelected (value) {
         this.$emit('md-selected', value)
